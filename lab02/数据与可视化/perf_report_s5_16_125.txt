@@ -1,0 +1,441 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 9K of event 'cycles:u'
+# Event count (approx.): 86065531008
+#
+# Children      Self  Command  Shared Object          Symbol                                                                                                                                                                                                                                                                                                   
+# ........  ........  .......  .....................  .........................................................................................................................................................................................................................................................................................................
+#
+    64.02%     0.00%  main     main                   [.] _start
+            |
+            ---_start
+               __libc_start_main
+               0xffffa3bab000
+               |          
+                --64.01%--main
+                          |          
+                          |--61.05%--offline_pq_ip_5
+                          |          |          
+                          |          |--58.74%--simple_kmeans
+                          |          |          
+                          |           --2.31%--GOMP_parallel
+                          |                     |          
+                          |                      --2.31%--offline_pq_ip_5
+                          |          
+                           --2.90%--pq_search_final
+                                     |          
+                                      --2.61%--GOMP_parallel
+                                                |          
+                                                 --2.34%--pq_search_final
+
+    64.02%     0.00%  main     libc.so.6              [.] __libc_start_main
+            |
+            ---__libc_start_main
+               0xffffa3bab000
+               |          
+                --64.01%--main
+                          |          
+                          |--61.05%--offline_pq_ip_5
+                          |          |          
+                          |          |--58.74%--simple_kmeans
+                          |          |          
+                          |           --2.31%--GOMP_parallel
+                          |                     |          
+                          |                      --2.31%--offline_pq_ip_5
+                          |          
+                           --2.90%--pq_search_final
+                                     |          
+                                      --2.61%--GOMP_parallel
+                                                |          
+                                                 --2.34%--pq_search_final
+
+    64.02%     0.00%  main     libc.so.6              [.] 0x0000ffffa3bab000
+            |
+            ---0xffffa3bab000
+               |          
+                --64.01%--main
+                          |          
+                          |--61.05%--offline_pq_ip_5
+                          |          |          
+                          |          |--58.74%--simple_kmeans
+                          |          |          
+                          |           --2.31%--GOMP_parallel
+                          |                     |          
+                          |                      --2.31%--offline_pq_ip_5
+                          |          
+                           --2.90%--pq_search_final
+                                     |          
+                                      --2.61%--GOMP_parallel
+                                                |          
+                                                 --2.34%--pq_search_final
+
+    64.01%     0.00%  main     main                   [.] main
+            |
+            ---main
+               |          
+               |--61.05%--offline_pq_ip_5
+               |          |          
+               |          |--58.74%--simple_kmeans
+               |          |          
+               |           --2.31%--GOMP_parallel
+               |                     |          
+               |                      --2.31%--offline_pq_ip_5
+               |          
+                --2.90%--pq_search_final
+                          |          
+                           --2.61%--GOMP_parallel
+                                     |          
+                                      --2.34%--pq_search_final
+
+    61.05%     0.00%  main     main                   [.] offline_pq_ip_5
+            |
+            ---offline_pq_ip_5
+               |          
+               |--58.74%--simple_kmeans
+               |          
+                --2.31%--GOMP_parallel
+                          |          
+                           --2.31%--offline_pq_ip_5
+
+    58.74%    58.71%  main     main                   [.] simple_kmeans
+            |          
+             --58.71%--_start
+                       __libc_start_main
+                       0xffffa3bab000
+                       main
+                       offline_pq_ip_5
+                       simple_kmeans
+
+    35.98%     0.00%  main     libc.so.6              [.] 0x0000ffffa3c69d5c
+            |
+            ---0xffffa3c69d5c
+               0xffffa3c02518
+               |          
+               |--32.79%--0xffffa3d897e0
+               |          |          
+               |          |--17.06%--pq_search_final
+               |          |          |          
+               |          |          |--1.41%--0xffffa3d8c4ec
+               |          |          |          
+               |          |           --0.80%--0xffffa3d8c4e0
+               |          |          
+               |          |--15.22%--offline_pq_ip_5
+               |          |          
+               |           --0.51%--std::__push_heap<__gnu_cxx::__normal_iterator<std::pair<float, unsigned int>*, std::vector<std::pair<float, unsigned int>, std::allocator<std::pair<float, unsigned int> > > >, long, std::pair<float, unsigned int>, __gnu_cxx::__ops::_Iter_comp_val<std::less<std::pair<float, unsigned int> > > >
+               |          
+               |--1.94%--0xffffa3d897c4
+               |          |          
+               |          |--1.02%--0xffffa3d8c210
+               |          |          
+               |           --0.83%--0xffffa3d8c21c
+               |          
+                --1.25%--0xffffa3d897e8
+                          |          
+                          |--0.73%--0xffffa3d8c4ec
+                          |          
+                           --0.51%--0xffffa3d8c4e0
+
+    35.98%     0.00%  main     libc.so.6              [.] 0x0000ffffa3c02518
+            |
+            ---0xffffa3c02518
+               |          
+               |--32.79%--0xffffa3d897e0
+               |          |          
+               |          |--17.06%--pq_search_final
+               |          |          |          
+               |          |          |--1.41%--0xffffa3d8c4ec
+               |          |          |          
+               |          |           --0.80%--0xffffa3d8c4e0
+               |          |          
+               |          |--15.22%--offline_pq_ip_5
+               |          |          
+               |           --0.51%--std::__push_heap<__gnu_cxx::__normal_iterator<std::pair<float, unsigned int>*, std::vector<std::pair<float, unsigned int>, std::allocator<std::pair<float, unsigned int> > > >, long, std::pair<float, unsigned int>, __gnu_cxx::__ops::_Iter_comp_val<std::less<std::pair<float, unsigned int> > > >
+               |          
+               |--1.94%--0xffffa3d897c4
+               |          |          
+               |          |--1.02%--0xffffa3d8c210
+               |          |          
+               |           --0.83%--0xffffa3d8c21c
+               |          
+                --1.25%--0xffffa3d897e8
+                          |          
+                          |--0.73%--0xffffa3d8c4ec
+                          |          
+                           --0.51%--0xffffa3d8c4e0
+
+    32.79%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d897e0
+            |
+            ---0xffffa3d897e0
+               |          
+               |--17.06%--pq_search_final
+               |          |          
+               |          |--1.41%--0xffffa3d8c4ec
+               |          |          
+               |           --0.80%--0xffffa3d8c4e0
+               |          
+               |--15.22%--offline_pq_ip_5
+               |          
+                --0.51%--std::__push_heap<__gnu_cxx::__normal_iterator<std::pair<float, unsigned int>*, std::vector<std::pair<float, unsigned int>, std::allocator<std::pair<float, unsigned int> > > >, long, std::pair<float, unsigned int>, __gnu_cxx::__ops::_Iter_comp_val<std::less<std::pair<float, unsigned int> > > >
+
+    19.40%    16.71%  main     main                   [.] pq_search_final
+            |          
+            |--14.77%--0xffffa3c69d5c
+            |          0xffffa3c02518
+            |          |          
+            |           --14.77%--0xffffa3d897e0
+            |                     pq_search_final
+            |          
+            |--2.69%--pq_search_final
+            |          |          
+            |          |--1.61%--0xffffa3d8c4ec
+            |          |          
+            |           --0.95%--0xffffa3d8c4e0
+            |          
+             --1.94%--_start
+                       __libc_start_main
+                       0xffffa3bab000
+                       main
+                       pq_search_final
+                       GOMP_parallel
+                       pq_search_final
+
+    17.52%    17.52%  main     main                   [.] offline_pq_ip_5
+            |          
+            |--15.22%--0xffffa3c69d5c
+            |          0xffffa3c02518
+            |          0xffffa3d897e0
+            |          offline_pq_ip_5
+            |          
+             --2.31%--_start
+                       __libc_start_main
+                       0xffffa3bab000
+                       main
+                       offline_pq_ip_5
+                       GOMP_parallel
+                       offline_pq_ip_5
+
+     4.91%     0.00%  main     libgomp.so.1.0.0       [.] GOMP_parallel
+            |
+            ---GOMP_parallel
+               |          
+               |--2.34%--pq_search_final
+               |          
+                --2.31%--offline_pq_ip_5
+
+     2.90%     0.06%  main     main                   [.] pq_search_final
+            |          
+             --2.84%--pq_search_final
+                       |          
+                        --2.61%--GOMP_parallel
+                                  |          
+                                   --2.34%--pq_search_final
+
+     2.43%     2.43%  main     libgomp.so.1.0.0       [.] 0x000000000001c4ec
+            |          
+             --2.14%--0xffffa3c69d5c
+                       0xffffa3c02518
+                       |          
+                       |--1.41%--0xffffa3d897e0
+                       |          pq_search_final
+                       |          0xffffa3d8c4ec
+                       |          
+                        --0.73%--0xffffa3d897e8
+                                  0xffffa3d8c4ec
+
+     2.43%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d8c4ec
+            |
+            ---0xffffa3d8c4ec
+
+     1.94%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d897c4
+            |
+            ---0xffffa3d897c4
+               |          
+               |--1.02%--0xffffa3d8c210
+               |          
+                --0.83%--0xffffa3d8c21c
+
+     1.54%     1.54%  main     libgomp.so.1.0.0       [.] 0x000000000001c4e0
+            |          
+             --1.31%--0xffffa3c69d5c
+                       0xffffa3c02518
+                       |          
+                       |--0.80%--0xffffa3d897e0
+                       |          pq_search_final
+                       |          0xffffa3d8c4e0
+                       |          
+                        --0.51%--0xffffa3d897e8
+                                  0xffffa3d8c4e0
+
+     1.54%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d8c4e0
+            |
+            ---0xffffa3d8c4e0
+
+     1.25%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d897e8
+            |
+            ---0xffffa3d897e8
+               |          
+               |--0.73%--0xffffa3d8c4ec
+               |          
+                --0.51%--0xffffa3d8c4e0
+
+     1.08%     1.08%  main     libgomp.so.1.0.0       [.] 0x000000000001c210
+            |          
+             --1.02%--0xffffa3c69d5c
+                       0xffffa3c02518
+                       0xffffa3d897c4
+                       0xffffa3d8c210
+
+     1.08%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d8c210
+            |
+            ---0xffffa3d8c210
+
+     0.91%     0.91%  main     libgomp.so.1.0.0       [.] 0x000000000001c21c
+            |          
+             --0.83%--0xffffa3c69d5c
+                       0xffffa3c02518
+                       0xffffa3d897c4
+                       0xffffa3d8c21c
+
+     0.91%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d8c21c
+            |
+            ---0xffffa3d8c21c
+
+     0.58%     0.58%  main     main                   [.] std::__push_heap<__gnu_cxx::__normal_iterator<std::pair<float, unsigned int>*, std::vector<std::pair<float, unsigned int>, std::allocator<std::pair<float, unsigned int> > > >, long, std::pair<float, unsigned int>, __gnu_cxx::__ops::_Iter_comp_val<std::less<std::pair<float, unsigned int> > > >
+            |          
+             --0.51%--0xffffa3c69d5c
+                       0xffffa3c02518
+                       0xffffa3d897e0
+                       std::__push_heap<__gnu_cxx::__normal_iterator<std::pair<float, unsigned int>*, std::vector<std::pair<float, unsigned int>, std::allocator<std::pair<float, unsigned int> > > >, long, std::pair<float, unsigned int>, __gnu_cxx::__ops::_Iter_comp_val<std::less<std::pair<float, unsigned int> > > >
+
+     0.18%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d8a9f4
+     0.16%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d8a1b0
+     0.08%     0.06%  main     libc.so.6              [.] malloc
+     0.07%     0.00%  main     libstdc++.so.6.0.28    [.] operator new
+     0.07%     0.02%  main     main                   [.] std::vector<std::pair<float, unsigned int>, std::allocator<std::pair<float, unsigned int> > >::_M_realloc_insert<std::pair<float, unsigned int> const&>
+     0.05%     0.05%  main     libgomp.so.1.0.0       [.] 0x0000000000030454
+     0.05%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3da0454
+     0.05%     0.00%  main     libc.so.6              [.] cfree
+     0.04%     0.04%  main     libgomp.so.1.0.0       [.] 0x000000000001c228
+     0.04%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d8c228
+     0.04%     0.01%  main     main                   [.] std::vector<std::pair<float, unsigned int>, std::allocator<std::pair<float, unsigned int> > >::_M_realloc_insert<std::pair<float, unsigned int> >
+     0.03%     0.03%  main     libc.so.6              [.] 0x000000000008fddc
+     0.03%     0.00%  main     libc.so.6              [.] 0x0000ffffa3c0fddc
+     0.02%     0.02%  main     [unknown]              [k] 0xffffcb7c9d0f0734
+     0.02%     0.00%  main     [unknown]              [.] 0xffffcb7c9d0f2b68
+     0.02%     0.00%  main     [unknown]              [.] 0xffffcb7c9d0f014c
+     0.02%     0.00%  main     [unknown]              [.] 0xffffcb7c9d256190
+     0.02%     0.00%  main     [unknown]              [.] 0xffffcb7c9d1a7ba4
+     0.02%     0.02%  main     libgomp.so.1.0.0       [.] 0x000000000001c234
+     0.02%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d8c234
+     0.02%     0.02%  main     libgomp.so.1.0.0       [.] 0x000000000001c4f8
+     0.02%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d8c4f8
+     0.02%     0.02%  main     libc.so.6              [.] 0x00000000000911dc
+     0.02%     0.00%  main     libc.so.6              [.] 0x0000ffffa3c111dc
+     0.02%     0.00%  main     main                   [.] LoadData<float>
+     0.02%     0.02%  main     libc.so.6              [.] 0x000000000008fc14
+     0.02%     0.00%  main     libc.so.6              [.] 0x0000ffffa3c0fc14
+     0.01%     0.01%  main     libc.so.6              [.] 0x000000000009c06c
+     0.01%     0.00%  main     libc.so.6              [.] 0x0000ffffa3c1c06c
+     0.01%     0.01%  main     libc.so.6              [.] 0x000000000009c068
+     0.01%     0.00%  main     libc.so.6              [.] 0x0000ffffa3c1c068
+     0.01%     0.01%  main     main                   [.] prepare_soa_codes
+     0.01%     0.01%  main     libgomp.so.1.0.0       [.] 0x00000000000149f4
+     0.01%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d849f4
+     0.01%     0.01%  main     libgomp.so.1.0.0       [.] 0x00000000000198d4
+     0.01%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d898d4
+     0.01%     0.01%  main     libgomp.so.1.0.0       [.] 0x000000000001c6c8
+     0.01%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d8c6c8
+     0.01%     0.01%  main     libgomp.so.1.0.0       [.] 0x000000000001c33c
+     0.01%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d8c33c
+     0.01%     0.00%  main     libstdc++.so.6.0.28    [.] std::istream::read
+     0.01%     0.01%  main     libgomp.so.1.0.0       [.] 0x0000000000019828
+     0.01%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d89828
+     0.01%     0.00%  main     libstdc++.so.6.0.28    [.] std::basic_filebuf<char, std::char_traits<char> >::xsgetn
+     0.01%     0.01%  main     libgomp.so.1.0.0       [.] GOMP_barrier
+     0.01%     0.01%  main     libgomp.so.1.0.0       [.] 0x00000000000197bc
+     0.01%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d897bc
+     0.01%     0.01%  main     libc.so.6              [.] 0x000000000008f960
+     0.01%     0.00%  main     libc.so.6              [.] 0x0000ffffa3c0f960
+     0.01%     0.01%  main     libstdc++.so.6.0.28    [.] std::_Rb_tree_insert_and_rebalance
+     0.00%     0.00%  main     libstdc++.so.6.0.28    [.] std::istream::sentry::sentry@plt
+     0.00%     0.00%  main     libc.so.6              [.] 0x000000000009c158
+     0.00%     0.00%  main     libc.so.6              [.] 0x0000ffffa3c1c158
+     0.00%     0.00%  main     libc.so.6              [.] 0x000000000009c188
+     0.00%     0.00%  main     libc.so.6              [.] 0x0000ffffa3c1c188
+     0.00%     0.00%  main     main                   [.] LoadData<int>
+     0.00%     0.00%  main     libc.so.6              [.] 0x000000000009c150
+     0.00%     0.00%  main     libc.so.6              [.] 0x0000ffffa3c1c150
+     0.00%     0.00%  main     libc.so.6              [.] 0x000000000009c140
+     0.00%     0.00%  main     libc.so.6              [.] 0x0000ffffa3c1c140
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x00000000000197c8
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d897c8
+     0.00%     0.00%  main     libstdc++.so.6.0.28    [.] std::basic_filebuf<char, std::char_traits<char> >::underflow
+     0.00%     0.00%  main     libstdc++.so.6.0.28    [.] std::basic_streambuf<char, std::char_traits<char> >::xsgetn
+     0.00%     0.00%  main     libc.so.6              [.] read
+     0.00%     0.00%  main     libstdc++.so.6.0.28    [.] std::__basic_file<char>::xsgetn
+     0.00%     0.00%  main     libc.so.6              [.] 0x000000000009c040
+     0.00%     0.00%  main     libc.so.6              [.] 0x0000ffffa3c1c040
+     0.00%     0.00%  main     main                   [.] omp_get_thread_num@plt
+     0.00%     0.00%  main     libc.so.6              [.] 0x000000000008f990
+     0.00%     0.00%  main     libc.so.6              [.] 0x0000ffffa3c0f990
+     0.00%     0.00%  main     libstdc++.so.6.0.28    [.] free@plt
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x000000000001c514
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d8c514
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x000000000001c500
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d8c500
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] omp_get_thread_num
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x000000000001c544
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d8c544
+     0.00%     0.00%  main     libc.so.6              [.] syscall
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x000000000001c238
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d8c238
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000000000019d18
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d89d18
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x000000000001c264
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d8c264
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x000000000001c220
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d8c220
+     0.00%     0.00%  main     ld-linux-aarch64.so.1  [.] 0x0000ffffa4095dd4
+     0.00%     0.00%  main     ld-linux-aarch64.so.1  [.] 0x0000ffffa4091e68
+     0.00%     0.00%  main     ld-linux-aarch64.so.1  [.] 0x0000ffffa409078c
+     0.00%     0.00%  main     ld-linux-aarch64.so.1  [.] 0x0000ffffa40936ec
+     0.00%     0.00%  main     ld-linux-aarch64.so.1  [.] 0x0000ffffa407c3ac
+     0.00%     0.00%  main     ld-linux-aarch64.so.1  [.] _dl_catch_exception
+     0.00%     0.00%  main     ld-linux-aarch64.so.1  [.] 0x0000ffffa407be40
+     0.00%     0.00%  main     ld-linux-aarch64.so.1  [.] 0x0000ffffa4083698
+     0.00%     0.00%  main     [unknown]              [.] 0xffffcb7c9d0f2560
+     0.00%     0.00%  main     [unknown]              [k] 0xffffcb7c9d110424
+     0.00%     0.00%  main     ld-linux-aarch64.so.1  [.] 0x0000ffffa409669c
+     0.00%     0.00%  main     [unknown]              [.] 0xffffcb7c9deec8b8
+     0.00%     0.00%  main     [unknown]              [.] 0xffffcb7c9deebf40
+     0.00%     0.00%  main     [unknown]              [.] 0xffffcb7c9d110538
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d897b8
+     0.00%     0.00%  main     libc.so.6              [.] __clone
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d89c64
+     0.00%     0.00%  main     libc.so.6              [.] pthread_create
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x00000000000197e8
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x000000000001c510
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d8c510
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x000000000001c348
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d8c348
+     0.00%     0.00%  main     ld-linux-aarch64.so.1  [.] 0x000000000001cdc0
+     0.00%     0.00%  main     ld-linux-aarch64.so.1  [.] 0x0000ffffa4095dc0
+     0.00%     0.00%  main     libc.so.6              [.] 0x0000ffffa3c117b8
+     0.00%     0.00%  main     libc.so.6              [.] 0x0000ffffa3c0f31c
+     0.00%     0.00%  main     ld-linux-aarch64.so.1  [.] 0x0000000000004c90
+     0.00%     0.00%  main     [unknown]              [k] 0xffffcb7c9deebf80
+     0.00%     0.00%  main     libc.so.6              [.] 0x000000000008ef80
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x000000000001c51c
+     0.00%     0.00%  main     ld-linux-aarch64.so.1  [.] 0x0000ffffa407dc90
+     0.00%     0.00%  main     libc.so.6              [.] 0x0000ffffa3c0ef8c
+     0.00%     0.00%  main     [unknown]              [.] 0xffffcb7c9deec868
+     0.00%     0.00%  main     libc.so.6              [.] 0x0000ffffa3c0ef80
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffa3d8c51c
+
+
+#
+# (Tip: Sample related events with: perf record -e '{cycles,instructions}:S')
+#

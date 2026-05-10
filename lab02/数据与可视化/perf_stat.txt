@@ -1,0 +1,29 @@
+s4-8-500
+
+    27,851,323,920      cache-references:u                                          
+       162,143,923      cache-misses:u            #    0.582 % of all cache refs    
+    56,176,666,639      cycles:u                                                    
+   156,059,444,321      instructions:u            #    2.78  insn per cycle         
+
+      15.501430955 seconds time elapsed
+
+      21.692518000 seconds user
+       0.102345000 seconds sys
+
+
+==================================================
+
+s5-4-250
+
+    30,923,261,623      cache-references:u                                          
+        52,072,542      cache-misses:u            #    0.168 % of all cache refs    
+    53,879,840,078      cycles:u                                                    
+   153,101,246,247      instructions:u            #    2.84  insn per cycle         
+
+      11.291721499 seconds time elapsed
+
+      20.993058000 seconds user
+       3.535165000 seconds sys
+
+
+==================================================

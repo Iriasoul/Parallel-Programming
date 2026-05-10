@@ -1,0 +1,211 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 6K of event 'cycles:u'
+# Event count (approx.): 53917105820
+#
+# Children      Self  Command  Shared Object          Symbol                                                                                                                                                                                                                                                                                                   
+# ........  ........  .......  .....................  .........................................................................................................................................................................................................................................................................................................
+#
+    70.21%     0.00%  main     main                   [.] _start
+            |
+            ---_start
+               __libc_start_main
+               0xffffb6a4b000
+               |          
+                --70.19%--main
+                          |          
+                          |--55.29%--offline_pq_ip
+                          |          |          
+                          |          |--50.51%--simple_kmeans
+                          |          |          
+                          |           --4.74%--GOMP_parallel
+                          |                     |          
+                          |                      --4.74%--offline_pq_ip
+                          |          
+                          |--14.22%--pq_rerank_search_simd
+                          |          
+                           --0.63%--std::__push_heap<__gnu_cxx::__normal_iterator<std::pair<float, unsigned int>*, std::vector<std::pair<float, unsigned int>, std::allocator<std::pair<float, unsigned int> > > >, long, std::pair<float, unsigned int>, __gnu_cxx::__ops::_Iter_comp_val<std::less<std::pair<float, unsigned int> > > >
+
+    70.21%     0.00%  main     libc.so.6              [.] __libc_start_main
+            |
+            ---__libc_start_main
+               0xffffb6a4b000
+               |          
+                --70.19%--main
+                          |          
+                          |--55.29%--offline_pq_ip
+                          |          |          
+                          |          |--50.51%--simple_kmeans
+                          |          |          
+                          |           --4.74%--GOMP_parallel
+                          |                     |          
+                          |                      --4.74%--offline_pq_ip
+                          |          
+                          |--14.22%--pq_rerank_search_simd
+                          |          
+                           --0.63%--std::__push_heap<__gnu_cxx::__normal_iterator<std::pair<float, unsigned int>*, std::vector<std::pair<float, unsigned int>, std::allocator<std::pair<float, unsigned int> > > >, long, std::pair<float, unsigned int>, __gnu_cxx::__ops::_Iter_comp_val<std::less<std::pair<float, unsigned int> > > >
+
+    70.21%     0.00%  main     libc.so.6              [.] 0x0000ffffb6a4b000
+            |
+            ---0xffffb6a4b000
+               |          
+                --70.19%--main
+                          |          
+                          |--55.29%--offline_pq_ip
+                          |          |          
+                          |          |--50.51%--simple_kmeans
+                          |          |          
+                          |           --4.74%--GOMP_parallel
+                          |                     |          
+                          |                      --4.74%--offline_pq_ip
+                          |          
+                          |--14.22%--pq_rerank_search_simd
+                          |          
+                           --0.63%--std::__push_heap<__gnu_cxx::__normal_iterator<std::pair<float, unsigned int>*, std::vector<std::pair<float, unsigned int>, std::allocator<std::pair<float, unsigned int> > > >, long, std::pair<float, unsigned int>, __gnu_cxx::__ops::_Iter_comp_val<std::less<std::pair<float, unsigned int> > > >
+
+    70.19%     0.00%  main     main                   [.] main
+            |
+            ---main
+               |          
+               |--55.29%--offline_pq_ip
+               |          |          
+               |          |--50.51%--simple_kmeans
+               |          |          
+               |           --4.74%--GOMP_parallel
+               |                     |          
+               |                      --4.74%--offline_pq_ip
+               |          
+               |--14.22%--pq_rerank_search_simd
+               |          
+                --0.63%--std::__push_heap<__gnu_cxx::__normal_iterator<std::pair<float, unsigned int>*, std::vector<std::pair<float, unsigned int>, std::allocator<std::pair<float, unsigned int> > > >, long, std::pair<float, unsigned int>, __gnu_cxx::__ops::_Iter_comp_val<std::less<std::pair<float, unsigned int> > > >
+
+    55.29%     0.00%  main     main                   [.] offline_pq_ip
+            |
+            ---offline_pq_ip
+               |          
+               |--50.51%--simple_kmeans
+               |          
+                --4.74%--GOMP_parallel
+                          |          
+                           --4.74%--offline_pq_ip
+
+    50.51%    50.51%  main     main                   [.] simple_kmeans
+            |
+            ---_start
+               __libc_start_main
+               0xffffb6a4b000
+               main
+               offline_pq_ip
+               simple_kmeans
+
+    34.43%    34.41%  main     main                   [.] offline_pq_ip
+            |          
+            |--29.67%--0xffffb6b09d5c
+            |          0xffffb6aa2518
+            |          0xffffb6c297e0
+            |          offline_pq_ip
+            |          
+             --4.74%--_start
+                       __libc_start_main
+                       0xffffb6a4b000
+                       main
+                       offline_pq_ip
+                       GOMP_parallel
+                       offline_pq_ip
+
+    29.79%     0.00%  main     libc.so.6              [.] 0x0000ffffb6b09d5c
+            |
+            ---0xffffb6b09d5c
+               0xffffb6aa2518
+               |          
+                --29.68%--0xffffb6c297e0
+                          |          
+                           --29.68%--offline_pq_ip
+
+    29.79%     0.00%  main     libc.so.6              [.] 0x0000ffffb6aa2518
+            |
+            ---0xffffb6aa2518
+               |          
+                --29.68%--0xffffb6c297e0
+                          |          
+                           --29.68%--offline_pq_ip
+
+    29.68%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffb6c297e0
+            |
+            ---0xffffb6c297e0
+               |          
+                --29.68%--offline_pq_ip
+
+    14.22%    14.22%  main     main                   [.] pq_rerank_search_simd
+            |
+            ---_start
+               __libc_start_main
+               0xffffb6a4b000
+               main
+               pq_rerank_search_simd
+
+     4.74%     0.00%  main     libgomp.so.1.0.0       [.] GOMP_parallel
+            |
+            ---GOMP_parallel
+               |          
+                --4.74%--offline_pq_ip
+
+     0.63%     0.63%  main     main                   [.] std::__push_heap<__gnu_cxx::__normal_iterator<std::pair<float, unsigned int>*, std::vector<std::pair<float, unsigned int>, std::allocator<std::pair<float, unsigned int> > > >, long, std::pair<float, unsigned int>, __gnu_cxx::__ops::_Iter_comp_val<std::less<std::pair<float, unsigned int> > > >
+            |
+            ---_start
+               __libc_start_main
+               0xffffb6a4b000
+               main
+               std::__push_heap<__gnu_cxx::__normal_iterator<std::pair<float, unsigned int>*, std::vector<std::pair<float, unsigned int>, std::allocator<std::pair<float, unsigned int> > > >, long, std::pair<float, unsigned int>, __gnu_cxx::__ops::_Iter_comp_val<std::less<std::pair<float, unsigned int> > > >
+
+     0.07%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffb6c297c4
+     0.07%     0.07%  main     libgomp.so.1.0.0       [.] 0x000000000001c21c
+     0.07%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffb6c2c21c
+     0.05%     0.05%  main     libgomp.so.1.0.0       [.] 0x000000000001c4ec
+     0.05%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffb6c2c4ec
+     0.04%     0.04%  main     libc.so.6              [.] 0x000000000009c0d4
+     0.04%     0.00%  main     libc.so.6              [.] 0x0000ffffb6abc0d4
+     0.04%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffb6c297e8
+     0.03%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffb6c2a9f4
+     0.02%     0.02%  main     libstdc++.so.6.0.28    [.] std::_Rb_tree_insert_and_rebalance
+     0.02%     0.02%  main     [unknown]              [k] 0xffffcb7c9deebf80
+     0.02%     0.00%  main     [unknown]              [.] 0xffffcb7c9d0f2560
+     0.02%     0.00%  main     [unknown]              [.] 0xffffcb7c9deec868
+     0.02%     0.02%  main     libgomp.so.1.0.0       [.] 0x000000000001c4e0
+     0.02%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffb6c2c4e0
+     0.01%     0.00%  main     main                   [.] LoadData<float>
+     0.01%     0.00%  main     libstdc++.so.6.0.28    [.] std::istream::read
+     0.00%     0.00%  main     libstdc++.so.6.0.28    [.] std::basic_filebuf<char, std::char_traits<char> >::xsgetn
+     0.00%     0.00%  main     libc.so.6              [.] 0x000000000009c160
+     0.00%     0.00%  main     libc.so.6              [.] 0x0000ffffb6abc160
+     0.00%     0.00%  main     libstdc++.so.6.0.28    [.] std::istream::sentry::sentry@plt
+     0.00%     0.00%  main     libc.so.6              [.] 0x000000000009c0e8
+     0.00%     0.00%  main     libc.so.6              [.] 0x0000ffffb6abc0e8
+     0.00%     0.00%  main     libc.so.6              [.] 0x000000000009c180
+     0.00%     0.00%  main     libc.so.6              [.] 0x0000ffffb6abc180
+     0.00%     0.00%  main     libstdc++.so.6.0.28    [.] std::istream::sentry::sentry
+     0.00%     0.00%  main     libstdc++.so.6.0.28    [.] std::basic_streambuf<char, std::char_traits<char> >::xsgetn
+     0.00%     0.00%  main     libstdc++.so.6.0.28    [.] std::basic_filebuf<char, std::char_traits<char> >::underflow
+     0.00%     0.00%  main     libstdc++.so.6.0.28    [.] fileno@plt
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] omp_get_num_threads
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x000000000001c238
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffb6c2c238
+     0.00%     0.00%  main     libc.so.6              [.] syscall
+     0.00%     0.00%  main     main                   [.] LoadData<int>
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x000000000001c228
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffb6c2c228
+     0.00%     0.00%  main     libstdc++.so.6.0.28    [.] std::__basic_file<char>::xsgetn
+     0.00%     0.00%  main     libc.so.6              [.] __clone
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffb6c29c64
+     0.00%     0.00%  main     libc.so.6              [.] pthread_create
+     0.00%     0.00%  main     libgomp.so.1.0.0       [.] 0x0000ffffb6c297b8
+     0.00%     0.00%  main     ld-linux-aarch64.so.1  [.] 0x000000000001cdc0
+     0.00%     0.00%  main     ld-linux-aarch64.so.1  [.] 0x0000ffffb6f40dc0
+
+
+#
+# (Tip: Skip collecting build-id when recording: perf record -B)
+#
