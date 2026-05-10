@@ -1,0 +1,207 @@
+====================
+
+暴力算法：
+
+test.sh测试：
+average recall: 0.99995
+average latency (us): 19024.6
+
+弱优化编译测试：
+average recall: 0.99995
+average latency (us): 20981.2
+
+(g++ main.cc -o main -O1 -fno-tree-vectorize -march=armv8-a -ffast-math)
+
+====================
+
+Running Strategy: 1
+Avg Recall: 0.99995
+Avg Latency: 5404.35 us
+
+====================
+
+Running Strategy: 2
+Avg Recall: 0.963406
+Avg Latency: 2795.77 us
+
+====================
+
+Running Strategy: 3
+Avg Recall: 0.11475
+Avg Latency: 554.338 us
+PQ_M = 4
+
+====================
+
+Running Strategy: 3
+Avg Recall: 0.2543
+Avg Latency: 1084.04 us
+PQ_M = 8
+
+====================
+
+Running Strategy: 3
+Avg Recall: 0.433
+Avg Latency: 2365.27 us
+PQ_M = 16
+
+====================
+
+Running Strategy: 3
+Avg Recall: 0.4973
+Avg Latency: 4562.5 us
+PQ_M = 32
+
+====================
+
+Running Strategy: 4
+Avg Recall: 0.796402
+Avg Latency: 998.589 us
+PQ_M = 4
+rerank_k = 500
+
+====================
+
+Running Strategy: 4
+Avg Recall: 0.944404
+Avg Latency: 1560.89 us
+PQ_M = 8
+rerank_k = 500
+
+====================
+
+Running Strategy: 4
+Avg Recall: 0.994351
+Avg Latency: 2967.29 us
+PQ_M = 16
+rerank_k = 500
+
+====================
+
+Running Strategy: 4
+Avg Recall: 0.99825
+Avg Latency: 5181.36 us
+PQ_M = 32
+rerank_k = 500
+
+====================
+
+Running Strategy: 4
+Avg Recall: 0.872104
+Avg Latency: 1325.93 us
+PQ_M = 8
+rerank_k = 250
+
+====================
+
+Running Strategy: 4
+Avg Recall: 0.969203
+Avg Latency: 1799.35 us
+PQ_M = 8
+rerank_k = 750
+
+====================
+
+Running Strategy: 4
+Avg Recall: 0.980252
+Avg Latency: 2090.26 us
+PQ_M = 8
+rerank_k = 1000
+
+====================
+
+Running Strategy: 5
+Avg Recall: 0.999
+Avg Latency: 1613.98 us
+PQ_M = 8
+rerank_k = 500
+
+====================
+
+Running Strategy: 5
+Avg Recall: 0.994851
+Avg Latency: 1295.68 us
+PQ_M = 8
+rerank_k = 250
+
+====================
+
+Running Strategy: 5
+Avg Recall: 0.980002
+Avg Latency: 1114.09 us
+PQ_M = 8
+rerank_k = 125
+
+====================
+
+Running Strategy: 5
+Avg Recall: 0.901604
+Avg Latency: 1023.16 us
+PQ_M = 4
+rerank_k = 125
+
+====================
+
+Running Strategy: 5
+Avg Recall: 0.964603
+Avg Latency: 1214.9 us
+PQ_M = 4
+rerank_k = 250
+
+====================
+
+Running Strategy: 5
+Avg Recall: 0.991201
+Avg Latency: 1409.66 us
+PQ_M = 4
+rerank_k = 500
+
+====================
+
+Running Strategy: 5
+Avg Recall: 0.99995
+Avg Latency: 1971.16 us
+PQ_M = 16
+rerank_k = 500
+
+====================
+
+Running Strategy: 5
+Avg Recall: 0.9998
+Avg Latency: 1670.62 us
+PQ_M = 16
+rerank_k = 250
+
+====================
+
+Running Strategy: 5
+Avg Recall: 0.99885
+Avg Latency: 1453.95 us
+PQ_M = 16
+rerank_k = 125
+
+====================
+
+Running Strategy: 5
+Avg Recall: 0.965454
+Avg Latency: 1349.62 us
+PQ_M = 16
+rerank_k = 25
+
+====================
+
+Running Strategy: 5
+Avg Recall: 0.831704
+Avg Latency: 1008.9 us
+PQ_M = 8
+rerank_k = 25
+
+====================
+
+Running Strategy: 5
+Avg Recall: 0.985552
+Avg Latency: 2402.67 us
+PQ_M = 32
+rerank_k = 25
+
+====================
