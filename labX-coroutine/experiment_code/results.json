@@ -1,0 +1,7 @@
+{
+  "env": "1 vCPU Intel Xeon @2.8GHz, 3.9GB RAM, Ubuntu 24.04; Python 3.12, Go 1.22, g++ 13.3 (C++20)",
+  "memory_kb_per_unit": {"python_asyncio": 1.1, "go_goroutine_rss": 2.6, "python_thread_rss": 16},
+  "create_us_per_unit": {"python_thread": 67, "python_asyncio": 11.3, "go_goroutine": 1.15},
+  "io_n2000_d20ms": {"threadpool_50": {"ms":812,"rps":2464}, "threadpool_200": {"ms":232,"rps":8620}, "threadpool_1000": {"ms":225,"rps":8902}, "asyncio": {"ms":37.5,"rps":53352}},
+  "ctxswitch_ns": {"cpp_coroutine": 1.85, "os_thread": 2045}
+}
