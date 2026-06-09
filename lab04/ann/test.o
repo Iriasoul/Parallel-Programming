@@ -1,0 +1,8 @@
+Running Strategy: 2  P=8
+Avg Recall: 0.968803
+Avg Latency: 132.707 us
+nlist = 256, nprobe = 16, part = cyclic, local_topk = 10
+
+====================
+
+Authorized users only. All activities may be monitored and reported.
