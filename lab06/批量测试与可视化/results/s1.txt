@@ -1,0 +1,22 @@
+load ../lab05/ann/data/DEEP100K.query.fbin  n=10000 d=96
+load ../lab05/ann/data/DEEP100K.gt.query.100k.top100.bin  n=10000 d=100
+load ../lab05/ann/data/DEEP100K.base.100k.fbin  n=100000 d=96
+GPU: NVIDIA GeForce RTX 4060 Laptop GPU (8.0 GB)
+strategy=1  data=../lab05/ann/data/
+
+== [S1] CPU IVF / IVF-PQ ==  N=100000 d=96 M=2000 k=10  nlist=256 PQ_M=8 threads=8
+baseline(avx2 flat) = 1562.5 us/query
+
+build IVF+PQ: 3347 ms
+
+method,nlist,nprobe,PQ_M,rerank_k,threads,recall,us_per_query,speedup
+IVF,256,8,0,0,8,0.9024,26.9,57.98
+IVF,256,16,0,0,8,0.9588,42.9,36.46
+IVF,256,32,0,0,8,0.9867,74.2,21.05
+IVF-PQ,256,8,8,200,8,0.8903,57.0,27.40
+IVF-PQ,256,8,8,500,8,0.9017,80.6,19.39
+IVF-PQ,256,16,8,200,8,0.9409,74.0,21.11
+IVF-PQ,256,16,8,500,8,0.9579,113.1,13.81
+IVF-PQ,256,32,8,200,8,0.9646,99.3,15.73
+IVF-PQ,256,32,8,500,8,0.9853,154.2,10.13
+====================

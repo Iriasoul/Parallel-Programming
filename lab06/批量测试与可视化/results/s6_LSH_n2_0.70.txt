@@ -1,0 +1,83 @@
+load 
+load 
+../lab05/ann/data/DEEP100K.query.fbin
+../lab05/ann/data/DEEP100K.query.fbin
+  n=
+  n=
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+ d=
+ d=
+9
+9
+6
+6
+
+
+load 
+load 
+../lab05/ann/data/DEEP100K.gt.query.100k.top100.bin
+../lab05/ann/data/DEEP100K.gt.query.100k.top100.bin
+  n=
+  n=1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+ d=
+ d=
+1
+1
+0
+0
+0
+0
+
+
+load 
+load 
+../lab05/ann/data/DEEP100K.base.100k.fbin
+../lab05/ann/data/DEEP100K.base.100k.fbin
+  n=1
+  n=
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+ d=
+0
+9
+ d=
+6
+9
+
+6
+GPU: NVIDIA GeForce RTX 4060 Laptop GPU (8.0 GB)
+strategy=6  data=../lab05/ann/data/
+
+== [S6] MPI + 异构分流 (MPI 2 进程: 1 GPU-LSH + 1 CPU-IVF) ==
+gpu_algo=1 gpu_frac=0.70 nprobe=16 cpu_threads=6  baseline=1562.5 us/q
+recall=0.9728  makespan=20.0 ms  us/query=10.0  qps=100052  speedup=156.33
+per-rank search time(ms): [r0 GPU 1400q 13.6ms] [r1 CPU 600q 20.0ms] 
+====================
+GPU: NVIDIA GeForce RTX 4060 Laptop GPU (8.0 GB)
+strategy=6  data=../lab05/ann/data/

@@ -1,0 +1,20 @@
+load ../lab05/ann/data/DEEP100K.query.fbin  n=10000 d=96
+load ../lab05/ann/data/DEEP100K.gt.query.100k.top100.bin  n=10000 d=100
+load ../lab05/ann/data/DEEP100K.base.100k.fbin  n=100000 d=96
+GPU: NVIDIA GeForce RTX 4060 Laptop GPU (8.0 GB)
+strategy=3  data=../lab05/ann/data/
+
+== [S3] LSH - CPU ==  N=100000 d=96 M=2000 k=10 threads=8
+baseline(avx2 flat) = 1562.5 us/query
+
+method,K_bits,rerank_k,threads,recall,us_per_query,speedup
+LSH,64,200,8,0.5373,247.9,6.30   (build 11 ms)
+LSH,64,500,8,0.6938,544.0,2.87   (build 11 ms)
+LSH,64,1000,8,0.7977,1020.7,1.53   (build 11 ms)
+LSH,128,200,8,0.7672,277.7,5.63   (build 15 ms)
+LSH,128,500,8,0.8865,595.2,2.63   (build 15 ms)
+LSH,128,1000,8,0.9441,1073.1,1.46   (build 15 ms)
+LSH,256,200,8,0.9261,309.2,5.05   (build 28 ms)
+LSH,256,500,8,0.9767,620.6,2.52   (build 28 ms)
+LSH,256,1000,8,0.9921,1116.0,1.40   (build 28 ms)
+====================

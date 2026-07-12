@@ -1,0 +1,21 @@
+load ../lab05/ann/data/DEEP100K.query.fbin  n=10000 d=96
+load ../lab05/ann/data/DEEP100K.gt.query.100k.top100.bin  n=10000 d=100
+load ../lab05/ann/data/DEEP100K.base.100k.fbin  n=100000 d=96
+GPU: NVIDIA GeForce RTX 4060 Laptop GPU (8.0 GB)
+strategy=5  data=../lab05/ann/data/
+
+== [S5] 异构协同分流 (GPU-exact || CPU-IVF) ==
+N=100000 d=96 M=2000 k=10 batch_B=512 CPU=8线程 nprobe=16  baseline=1562.5 us/q
+build indices: 136 ms
+
+gpu_frac,recall,us_per_query,qps,speedup_vs_baseline
+1.00,1.0000,24.9,40148,62.73
+0.96,0.9984,24.6,40668,63.54
+0.94,0.9970,24.4,41000,64.06
+0.92,0.9959,24.2,41405,64.70
+0.90,0.9953,23.9,41879,65.44
+0.80,0.9916,21.2,47244,73.82
+0.60,0.9825,17.7,56534,88.33
+0.40,0.9752,17.1,58339,91.15
+0.00,0.9588,27.3,36665,57.29
+====================

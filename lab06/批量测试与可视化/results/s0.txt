@@ -1,0 +1,14 @@
+load ../lab05/ann/data/DEEP100K.query.fbin  n=10000 d=96
+load ../lab05/ann/data/DEEP100K.gt.query.100k.top100.bin  n=10000 d=100
+load ../lab05/ann/data/DEEP100K.base.100k.fbin  n=100000 d=96
+GPU: NVIDIA GeForce RTX 4060 Laptop GPU (8.0 GB)
+strategy=0  data=../lab05/ann/data/
+
+== [S0] Flat暴力算法 ==  N=100000 d=96  测试 query=2000  k=10  AVX2=1
+
+[scalar] recall@10 = 1.0000 | 总 8754.9 ms | 4377.5 us/query
+[avx2  ] recall@10 = 1.0000 | 总 3061.7 ms | 1530.9 us/query
+SIMD 加速比 (scalar/avx2) = 2.86x
+
+>>> 暴力基线延迟 = 1530.9 us/query (avx2)  
+====================
